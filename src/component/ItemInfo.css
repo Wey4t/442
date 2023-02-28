@@ -1,0 +1,10 @@
+.header {
+    background-color:#8BBAFF;
+  }
+
+.search_bar_position{
+    justify-content: flex-end
+}
+.main-wrapper {
+    height: 100vh;  
+  }
