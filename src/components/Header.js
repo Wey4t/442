@@ -31,7 +31,13 @@ function Header(props) {
                 setGuestName(response.data.username)
                 setNoti(response.data.noti)
             }
-        })
+        }).catch(function (error) {
+            console.log(error.response.status) // 401
+            console.log(error.response.data.error) //Please Authenticate or whatever returned from server
+            if(error.response.status==401){
+                setGuest(true)
+            }
+        });
     }
     function togglePopup() {
         setPopup(!popup);
